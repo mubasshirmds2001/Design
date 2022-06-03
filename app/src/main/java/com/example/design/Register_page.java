@@ -29,7 +29,8 @@ public class Register_page extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_page);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        mAuth = FirebaseAuth.getInstance();
 
         username=(EditText) findViewById(R.id.edusername);
         email=(EditText) findViewById(R.id.edemail);
@@ -93,10 +94,7 @@ public class Register_page extends AppCompatActivity implements View.OnClickList
             return;
         }
 
-        if (!password.equals(cpassword))
-        {
-            Toast.makeText(Register_page.this, "Password Should match", Toast.LENGTH_SHORT).show();
-        }
+
 
         progressBar.setVisibility(View.VISIBLE);
 
@@ -105,7 +103,7 @@ public class Register_page extends AppCompatActivity implements View.OnClickList
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 if(task.isSuccessful()) {
-                    User user = new User(Username,Email,Password,CPassword);
+                    User user = new User(Username,Email,Password);
 
                     FirebaseDatabase.getInstance().getReference("Users")
                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
