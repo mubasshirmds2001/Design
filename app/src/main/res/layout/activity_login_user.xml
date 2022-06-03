@@ -11,18 +11,18 @@
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="29dp"
         android:layout_height="32dp"
-        android:layout_marginTop="316dp"
         android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.507" />
 
     <EditText
         android:id="@+id/edlogemail"
         android:layout_width="294dp"
         android:layout_height="51dp"
-        android:layout_marginEnd="56dp"
+        android:layout_marginEnd="60dp"
         android:layout_marginBottom="476dp"
         android:background="@drawable/edittext_bg"
         android:drawableStart="@drawable/ic_email"
@@ -42,14 +42,13 @@
         android:id="@+id/textInputLayout"
         android:layout_width="294dp"
         android:layout_height="51dp"
-        android:layout_marginEnd="56dp"
         android:layout_marginBottom="384dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edemail"
-        app:layout_constraintTop_toBottomOf="@+id/edemail"
-        app:layout_constraintVertical_bias="0.049"
+        app:layout_constraintEnd_toEndOf="@+id/edlogemail"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edlogemail"
+        app:layout_constraintTop_toBottomOf="@+id/edlogemail"
+        app:layout_constraintVertical_bias="1.0"
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -143,7 +142,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="124dp"
         android:background="@drawable/button_layout"
         android:fontFamily="@font/roboto"
         android:text="LOG IN"

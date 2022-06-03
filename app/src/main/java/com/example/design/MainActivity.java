@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity{
     }
 
     public void openActivity2(){
-        Intent intent=new Intent(this,Register_page.class);
+        Intent intent=new Intent(this,Login_user.class);
         startActivity(intent);
     }
 }

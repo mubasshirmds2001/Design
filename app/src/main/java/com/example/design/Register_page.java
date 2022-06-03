@@ -103,7 +103,7 @@ public class Register_page extends AppCompatActivity implements View.OnClickList
             public void onComplete(@NonNull Task<AuthResult> task) {
 
                 if(task.isSuccessful()) {
-                    User user = new User(Username,Email,Password);
+                    User user = new User(Username,Email);
 
                     FirebaseDatabase.getInstance().getReference("Users")
                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
@@ -122,7 +122,7 @@ public class Register_page extends AppCompatActivity implements View.OnClickList
                             });
 
                 }else {
-                    Toast.makeText(Register_page.this, "Failed to register", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Register_page.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
                 }
 
