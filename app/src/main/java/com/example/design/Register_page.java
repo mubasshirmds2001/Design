@@ -38,7 +38,7 @@ public class Register_page extends AppCompatActivity implements View.OnClickList
         cpassword=(EditText) findViewById(R.id.edcpassword);
         createact =(Button) findViewById(R.id.btnCreateAcc);
 
-        progressBar=(ProgressBar) findViewById(R.id.progressBar);
+        progressBar=(ProgressBar) findViewById(R.id.progressBar3);
 
         createact.setOnClickListener(this);
     }

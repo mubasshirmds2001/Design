@@ -163,7 +163,7 @@
         tools:ignore="UnknownId" />
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/progressBar3"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="29dp"
         android:layout_height="32dp"
